@@ -11029,3 +11029,88 @@ figure {
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
 }
+
+figure img:hover {
+  opacity: 0.8;
+  transition: .5s ease;
+  z-index: 3;
+
+}
+
+figure img {
+  border-radius: 5px;
+}
+
+#wrapper .text {
+  position: relative;
+  bottom: 10px;
+  left: 0px;
+  visibility: hidden;
+  text-decoration: none;
+}
+
+#wrapper:hover .text {
+  visibility: visible;
+  transition: .5s ease;
+  text-decoration: none;
+
+}
+
+.text {
+
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 24px;
+  z-index: 0;
+  text-decoration: none;
+  ;
+
+}
+
+
+#wrapper-002 .text-002 {
+  position: relative;
+  bottom: 100px;
+  left: 0px;
+  visibility: hidden;
+  text-decoration: none;
+}
+
+#wrapper-002:hover .text-002 {
+  visibility: visible;
+  transition: .5s ease;
+  text-decoration: none;
+
+}
+
+.text-002 {
+
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 24px;
+  z-index: 0;
+  text-decoration: none;
+  margin-top: 20px;
+  ;
+
+}
+
+.container-001 {
+  margin-top: 0px;
+  width: 88%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cat-heading {
+  margin-top: 80px;
+}
+
+.one-third {
+  width: 29%;
+  float: left;
+  margin: 2%;
+}
