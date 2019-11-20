@@ -37,7 +37,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "Quicksand", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -69,11 +69,11 @@ section {
 
 body {
   margin: 0;
-  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Quicksand", sans-serif, "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: lighter;
   line-height: 1.5;
-  color: #212529;
+  color: #5e6368;
   text-align: left;
   background-color: #fff;
 }
@@ -96,6 +96,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
+  font-family: "Quicksand", sans-serif, "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 p {
@@ -10964,4 +10965,67 @@ form .row:first-child .floating-label-form-group {
 
 .copyright {
   background-color: #1a252f;
+}
+
+/*---- Updates ----*/
+
+.carousel {
+  margin-top: 70px;
+}
+
+figure {
+  text-align: center;
+  margin: auto auto 30px;
+}
+
+.center-form {
+  padding-top: 30px;
+  min-height: 240px;
+  margin: auto;
+  max-width: 70%;
+  text-align: center;
+}
+
+.navbar span {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
+}
+
+.navbar-brand {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+.nav-link {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+.page-section-heading {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+.navbar-toggler {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+
+.location {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+
+}
+
+.location-002 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-top: 20px;
+  max-width: 80%;
+}
+
+.lead span {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
 }
