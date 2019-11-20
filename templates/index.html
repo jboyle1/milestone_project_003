@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
+{% for upload in uploads %}
+    {{uploads.length}}
+    {{uploads.chunkSize}}
+    {{uploads.uploadDate}}
+    {{uploads.filename}}
+    {{uploads.md5}}
+    {{uploads.contentType}}
+{% endfor %}
+
+
     <!-- Masthead -->
     <header>
         <!--<style> .carousel { margin-top: 70px; }-->
@@ -193,7 +203,7 @@
                                                     src="static/img/portfolio/catagories/catagorya.jpg"
                                                     class="img-fluid"></a>
                                                 <p class="text">Architecture</p>
-                                              
+
                                             </div>
                                         </figure>
 
@@ -202,6 +212,7 @@
                                                 <a href="/commercial" class="hover">
 
                                                     <img
+                                                        
                                                         alt="picture"
                                                         src="static/img/portfolio/catagories/catagoryc.jpg"
                                                         class="img-fluid"></a>
@@ -221,19 +232,17 @@
                                                     </div>
                                                 </figure>
 
-                                            <figure class="col-md-3">
-                                                <div id="wrapper">
-                                                    <a href="/construction" class="hover">
+                                                <figure class="col-md-3">
+                                                    <div id="wrapper">
+                                                        <a href="/construction" class="hover">
 
-                                                        <img
-                                                            alt="picture"
-                                                            src="static/img/portfolio/catagories/catagorycon.jpg"
-                                                            class="img-fluid"></a>
-                                                        <p class="text">Construction</p>
-                                                    </div>
-                                                </figure>
-
-                                                
+                                                            <img
+                                                                alt="picture"
+                                                                src="static/img/portfolio/catagories/catagorycon.jpg"
+                                                                class="img-fluid"></a>
+                                                            <p class="text">Construction</p>
+                                                        </div>
+                                                    </figure>
 
                                                 </div>
 
