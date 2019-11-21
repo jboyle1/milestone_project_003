@@ -1,6 +1,9 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, url_for, request, redirect
+from flask_pymongo import PyMongo
 
 app = Flask(__name__)
+app.config['MONGO_URI'] = 'mongodb+srv://jed:jeddy1234@mongouploads-tncqz.mongodb.net/test?retryWrites=true&w=majority'
+mongo = PyMongo(app)
 
 
 @app.route('/')
@@ -26,6 +29,11 @@ def property():
 @app.route('/construction')
 def construction():
     return render_template('construction.html')
+
+
+@app.route('/file/<filename>')
+def file(filename):
+    return mongo.send_file(filename)
 
 
 if __name__ == "__main__":
