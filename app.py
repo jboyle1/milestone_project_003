@@ -5,10 +5,11 @@ app = Flask(__name__)
 app.config['MONGO_URI'] = 'mongodb+srv://Boyle:jeddy1234@paddy-photodb-o2y1x.mongodb.net/paddy_photodb?retryWrites=true&w=majority'
 mongo = PyMongo(app)
 
+##Homepage routing
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', paddy_photodb=mongo.db.catagory_photos.find())
 
 
 @app.route('/architecture')
@@ -29,6 +30,18 @@ def property():
 @app.route('/construction')
 def construction():
     return render_template('construction.html')
+
+
+
+
+##Architecture routing
+
+@app.route('/architecture/st-pauls-church')
+def stPaulsChurch():
+    return render_template('st-pauls-church.html', paddy_photodb=mongo.db.st_pauls_curch.find())
+
+
+
 
 
 @app.route('/file/<filename>')
