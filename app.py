@@ -33,12 +33,13 @@ def construction():
 
 
 
-
 ##Architecture routing
 
-@app.route('/architecture/st-pauls-church')
-def stPaulsChurch():
-    return render_template('st-pauls-church.html', paddy_photodb=mongo.db.st_pauls_curch.find())
+@app.route('/st-pauls-church')
+def st_pauls_church():
+    return render_template('st-pauls-church.html')
+
+
 
 
 
