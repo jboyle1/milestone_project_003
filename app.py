@@ -2,7 +2,7 @@ from flask import Flask, render_template, url_for, request, redirect
 from flask_pymongo import PyMongo
 
 app = Flask(__name__)
-app.config['MONGO_URI'] = 'mongodb+srv://Boyle:jeddy1234@paddy-photodb-o2y1x.mongodb.net/test?retryWrites=true&w=majority'
+app.config['MONGO_URI'] = 'mongodb+srv://Boyle:jeddy1234@paddy-photodb-o2y1x.mongodb.net/paddy_photodb?retryWrites=true&w=majority'
 mongo = PyMongo(app)
 
 
