@@ -5,14 +5,14 @@
     <div class="container">
 
         <!-- Portfolio Section Heading -->
-        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Architecture</h2>
+        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Markwich Terrace</h2>
         <!-- Icon Divider -->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
-            
+           
         </div>
+        
 
-    </div>
 </section>
 
    
@@ -21,15 +21,17 @@
     <!-- About Section Content -->
 
     <div class="row">
-    {% for photos_003 in paddy_photodb %}
+{% for pages in paddy_photodb %}
         <figure class="col-md-4">
             <div id="wrapper-002"> 
             
-            <a href="{{ photos_003.link }}" class="hover">
-          
-                    <img alt="picture" src="{{ photos_003.url }}"
+            <a href="{{ pages.url }}" width=400 class="hover"
+          data-responsive="true"
+          data-lightbox="mygallery"
+          data-title="{{ pages.name }}">
+                    <img alt="picture" src="{{ pages.url }}"
                         class="img-fluid"></a><br><br>
-                <p class="text-002 lead">{{photos_003.name}}</p>
+                <p class="text-002 lead">{{ pages.name }}</p>
             </div>
             
         </figure>

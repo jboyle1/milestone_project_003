@@ -25,7 +25,7 @@ def commercial():
 
 @app.route('/property')
 def property():
-    return render_template('property.html')
+    return render_template('property.html', paddy_photodb=mongo.db.photos_003.find())
 
 
 @app.route('/construction')
@@ -98,6 +98,43 @@ def fox():
 def manoukian():
     return render_template('manoukian.html', paddy_photodb=mongo.db.manoukian.find())
 
+##Property routing
+
+@app.route('/ash')
+def ash():
+    return render_template('ash.html', paddy_photodb=mongo.db.ash.find())
+
+@app.route('/beachaven')
+def beachaven():
+    return render_template('beachaven.html', paddy_photodb=mongo.db.beachaven.find())
+
+@app.route('/etham')
+def etham():
+    return render_template('etham.html', paddy_photodb=mongo.db.etham.find())
+
+@app.route('/garden')
+def garden():
+    return render_template('garden.html', paddy_photodb=mongo.db.garden.find())
+
+@app.route('/marina')
+def marina():
+    return render_template('marina.html', paddy_photodb=mongo.db.marina.find())
+
+@app.route('/markwich')
+def markwich():
+    return render_template('markwich.html', paddy_photodb=mongo.db.markwich.find())
+
+@app.route('/pages')
+def pages():
+    return render_template('pages.html', paddy_photodb=mongo.db.pages.find())
+
+@app.route('/chapel')
+def chapel():
+    return render_template('chapel.html', paddy_photodb=mongo.db.chapel.find())
+
+@app.route('/street')
+def street():
+    return render_template('street.html', paddy_photodb=mongo.db.street.find())
 
 
 @app.route('/file/<filename>')
