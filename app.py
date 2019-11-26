@@ -11,6 +11,7 @@ mongo = PyMongo(app)
 def index():
     return render_template('index.html', paddy_photodb=mongo.db.catagory_photos.find())
 
+##Catagory routing
 
 @app.route('/architecture')
 def architecture():
@@ -19,7 +20,7 @@ def architecture():
 
 @app.route('/commercial')
 def commercial():
-    return render_template('commercial.html')
+    return render_template('commercial.html', paddy_photodb=mongo.db.photos_002.find())
 
 
 @app.route('/property')
@@ -71,6 +72,31 @@ def hamstone_house():
 def copyhold_barn():
     return render_template('copyhold-barn.html', paddy_photodb=mongo.db.copyhold_barn.find())
 
+##Commercial routing
+
+@app.route('/padstone')
+def padstone():
+    return render_template('padstone.html', paddy_photodb=mongo.db.padstone.find())
+
+@app.route('/woodbase')
+def woodbase():
+    return render_template('woodbase.html', paddy_photodb=mongo.db.woodbase.find())
+
+@app.route('/various')
+def various():
+    return render_template('various.html', paddy_photodb=mongo.db.various.find())
+
+@app.route('/emess')
+def emess():
+    return render_template('emess.html', paddy_photodb=mongo.db.emess.find())
+
+@app.route('/fox')
+def fox():
+    return render_template('fox.html', paddy_photodb=mongo.db.fox.find())
+
+@app.route('/manoukian')
+def manoukian():
+    return render_template('manoukian.html', paddy_photodb=mongo.db.manoukian.find())
 
 
 
