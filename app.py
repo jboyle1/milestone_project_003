@@ -37,10 +37,39 @@ def construction():
 
 @app.route('/st-pauls-church')
 def st_pauls_church():
-    return render_template('st-pauls-church.html')
+    return render_template('st-pauls-church.html', paddy_photodb=mongo.db.st_pauls_curch.find())
 
+@app.route('/lutyens-house')
+def lutyens_house():
+    return render_template('lutyens-house.html', paddy_photodb=mongo.db.lutyens_house.find())
 
+@app.route('/sun-lounge')
+def sun_lounge():
+    return render_template('sun-lounge.html', paddy_photodb=mongo.db.sun_lounge.find())
 
+@app.route('/somerset-house')
+def somerset_house():
+    return render_template('somerset-house.html', paddy_photodb=mongo.db.somerset_house.find())
+
+@app.route('/plascoch')
+def plascoch():
+    return render_template('plascoch.html', paddy_photodb=mongo.db.plascoch.find())
+
+@app.route('/hawthorns')
+def hawthorns():
+    return render_template('hawthorns.html', paddy_photodb=mongo.db.hawthorns.find())
+
+@app.route('/hastings-college')
+def hastings_college():
+    return render_template('hastings-college.html', paddy_photodb=mongo.db.hastings_college.find())
+
+@app.route('/hamstone-house')
+def hamstone_house():
+    return render_template('hamstone-house.html', paddy_photodb=mongo.db.hamstone_house.find())
+
+@app.route('/copyhold-barn')
+def copyhold_barn():
+    return render_template('copyhold-barn.html', paddy_photodb=mongo.db.copyhold_barn.find())
 
 
 

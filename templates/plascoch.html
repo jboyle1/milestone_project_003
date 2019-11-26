@@ -5,7 +5,7 @@
     <div class="container">
 
         <!-- Portfolio Section Heading -->
-        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">St Pauls Church</h2>
+        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Plascoch</h2>
         <!-- Icon Divider -->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -21,17 +21,17 @@
     <!-- About Section Content -->
 
     <div class="row">
-{% for st_pauls_curch in paddy_photodb %}
+{% for plascoch in paddy_photodb %}
         <figure class="col-md-4">
             <div id="wrapper-002"> 
             
-            <a href="{{ st_pauls_curch.url }}" width=400 class="hover"
+            <a href="{{ plascoch.url }}" width=400 class="hover"
           data-responsive="true"
           data-lightbox="mygallery"
-          data-title="{{ st_pauls_curch.name }}">
-                    <img alt="picture" src="{{ st_pauls_curch.url }}"
+          data-title="{{ plascoch.name }}">
+                    <img alt="picture" src="{{ plascoch.url }}"
                         class="img-fluid"></a><br><br>
-                <p class="text-002 lead">{{ st_pauls_curch.name }}</p>
+                <p class="text-002 lead">{{ plascoch.name }}</p>
             </div>
             
         </figure>
