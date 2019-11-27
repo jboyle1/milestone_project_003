@@ -11,6 +11,7 @@ mongo = PyMongo(app)
 def index():
     return render_template('index.html', paddy_photodb=mongo.db.catagory_photos.find())
 
+
 ##Catagory routing
 
 @app.route('/architecture')
@@ -30,7 +31,7 @@ def property():
 
 @app.route('/construction')
 def construction():
-    return render_template('construction.html')
+    return render_template('construction.html', paddy_photodb=mongo.db.photos_004.find())
 
 
 
