@@ -1,9 +1,15 @@
 from flask import Flask, render_template, url_for, request, redirect
+from flask_sqlalchamy import SQLAlchemy
 from flask_pymongo import PyMongo
+from datetime import datetime
 
 app = Flask(__name__)
 app.config['MONGO_URI'] = 'mongodb+srv://Boyle:jeddy1234@paddy-photodb-o2y1x.mongodb.net/paddy_photodb?retryWrites=true&w=majority'
 mongo = PyMongo(app)
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+db = SQLAlchemy(app)
 
 ##Homepage routing
 
@@ -36,15 +42,18 @@ def construction():
 
 ##Testimonial routing
 
+class Todo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.String(200), nullable=False)
+    date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
-
+    def __repr__(self):
+        return '<Task %r>' % self.id
 
 
 @app.route('/testimonials')
-def testimonials(): return "Hello, World"
-
-
-
+def testimonials(): 
+    return render_template('testimonials.html')
 
 
 ##Architecture routing
