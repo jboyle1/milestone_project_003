@@ -1,20 +1,16 @@
 {% extends 'base-002.html' %}
 {% block content %}
 
-<section class="page-section about" id="architecture">
+<section class="page-section about" id="commercial">
     <div class="container">
 
         <!-- Portfolio Section Heading -->
-        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">St Pauls Church</h2>
+        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Fox Linton Interiors</h2>
         <!-- Icon Divider -->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
-            
            
         </div>
-        <div class="button">
-                <a href="/testimonials"> Add a testimonial
-            </div>
         
 
 </section>
@@ -25,25 +21,21 @@
     <!-- About Section Content -->
 
     <div class="row">
-{% for ash in paddy_photodb %}
-
+{% for fox in paddy_photodb %}
         <figure class="col-md-4">
             <div id="wrapper-002"> 
             
-            <a href="{{ ash.url }}" width=400 class="hover"
+            <a href="{{ fox.url }}" width=400 class="hover"
           data-responsive="true"
           data-lightbox="mygallery"
-          data-title="{{ ash.name }}">
-                    <img alt="picture" src="{{ ash.url }}"
+          data-title="{{ fox.name }}">
+                    <img alt="picture" src="{{ fox.url }}"
                         class="img-fluid"></a><br><br>
-                <p class="text-002 lead">{{ ash.name }}</p>
+                <p class="text-002 lead">{{ fox.name }}</p>
             </div>
-            
-            
             
         </figure>
      {% endfor %}
-     
      </div>
      <br><br>
 </div>

@@ -34,6 +34,18 @@ def construction():
     return render_template('construction.html', paddy_photodb=mongo.db.photos_004.find())
 
 
+##Testimonial routing
+
+
+
+
+
+@app.route('/testimonials')
+def testimonials(): return "Hello, World"
+
+
+
+
 
 ##Architecture routing
 
