@@ -104,13 +104,10 @@ p {
 
 abbr[data-original-title],
 abbr[title] {
-    text-decoration: underline;
-    -webkit-text-decoration: underline dotted;
-    text-decoration: underline dotted;
+  
     cursor: help;
     border-bottom: 0;
-    -webkit-text-decoration-skip-ink: none;
-    text-decoration-skip-ink: none
+
 }
 
 address {
@@ -179,7 +176,7 @@ a {
 
 a:hover {
     color: #117964;
-    text-decoration: underline
+    text-decoration: none;
 }
 
 a:not([href]):not([tabindex]) {
@@ -11130,4 +11127,8 @@ td {
 
 #content {
     width: 70%;
+}
+
+.text-dec {
+    text-decoration: none;
 }
