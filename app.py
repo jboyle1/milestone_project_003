@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, url_for, request, redirect
 from flask_pymongo import PyMongo
 
@@ -143,5 +144,7 @@ def file(filename):
     return mongo.send_file(filename)
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    app.run(host=os.environ.get('IP'),
+            port=(os.environ.get('PORT')),
+            debug=True)
