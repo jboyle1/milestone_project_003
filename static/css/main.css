@@ -2,3 +2,10 @@ body {
   margin: 0;
   font-family: sans-serif;
 }
+
+table {
+  border: 1px solid black;
+}
+td {
+  border: 1px solid black;
+}
