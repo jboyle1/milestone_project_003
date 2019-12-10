@@ -11071,6 +11071,8 @@ figure img {
     margin-right: auto;
 }
 
+
+
 .cat-heading {
     margin-top: 80px;
 }
@@ -11081,3 +11083,51 @@ figure img {
     margin: 2%;
 }
 
+
+
+
+
+
+body, html {
+    margin: 0;
+    
+}
+
+.content {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.container-002 {
+    margin-top: 0px;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    margin-top: 20px;
+}
+
+#content {
+    width: 70%;
+}

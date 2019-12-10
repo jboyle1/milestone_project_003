@@ -11,6 +11,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
+
 ##Homepage routing
 
 @app.route('/')
@@ -62,7 +63,7 @@ def testimonials():
             db.session.commit()
             return redirect('/testimonials')
         except:
-            return 'There was an issue adding your task'
+            return 'There was an issue adding your testimonial'
 
     else:
         tasks = Todo.query.order_by(Todo.date_created).all()
