@@ -83,6 +83,24 @@ def delete(id):
         return 'There was a problem deleting that testimonial'
 
 
+@app.route('/update/<int:id>', methods=['GET', 'POST'])
+def update(id):
+    task = Todo.query.get_or_404(id)
+
+    if request.method == 'POST':
+        task.content = request.form['content']
+
+        try:
+            db.session.commit()
+            return redirect('/testimonials')
+        except:
+            return 'There was an issue updating your testimonial'
+
+    else:
+        return render_template('update.html', task=task)
+
+
+
 
 ##Architecture routing
 
@@ -193,4 +211,4 @@ def file(filename):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", debug=True)

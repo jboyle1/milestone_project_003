@@ -5,7 +5,7 @@
     <div class="container">
 
         <!-- Portfolio Section Heading -->
-        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Testimonials</h2>
+        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Update Testimonial</h2>
         <!-- Icon Divider -->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -28,20 +28,14 @@
   </head>
   <body>
     {%block body%} 
-  
-  
-  <style>
-  
-  body, html {
+  <style>body, html {
     margin: 0;
-    font-family: 'Quicksand', sans-serif;
     
 }
 
 .content {
     margin: 0 auto;
     width: 400px;
-    
 }
 
 .container-002 {
@@ -50,7 +44,6 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 table, td, th {
@@ -80,37 +73,23 @@ td {
 }</style>
     
     
-<div class="container-002">
-{% if tasks|length < 1 %}
-  <h2 style="text-align: center; font-family: 'Quicksand', sans-serif;">There are no testimonials for this job. Create one below!</h2><br>
-  {% else %}
-  <table>
-    <tr>
-      <th>Message</th>
-      <th>Added</th>
-      <th>Actions</th>
-    </tr>
-    
-    {% for task in tasks %}
 
-    <tr>
-      <td>{{ task.content }}</td>
-      <td>{{ task.date_created.date() }}</td>
-      <td>
-        <a href="/delete/{{ task.id }}">Delete</a>
-        <br />
-        <a href="/update/{{ task.id }}">Update</a>
-      </td>
-    </tr>
-    {% endfor %}
-  </table><br><br>
-{% endif %}
-  <form action="/testimonials" method="POST">
-    <input type="text" name="content" id="content" />
-    <input type="submit" value="Add Testimonial" />
-  </form>
+<div class="content">
+  
+
+  <div class="form">
+    <form action="/update/{{ task.id }}" method="POST">
+      <input
+        type="text"
+        name="content"
+        id="content"
+        value="{{ task.content }}"
+      />
+      <input type="submit" value="Update" />
+    </form>
+  </div>
 </div>
-    {%endblock%}
+{% endblock %}
     <!-- Ginger2 Syntax template for Flask-->
 
 
