@@ -1,4 +1,4 @@
-### https://milestone-project-003.herokuapp.com/
+### https://milestone_project_003.herokuapp.com/
  
 ## Milestone Project 3 (Paddy Boyle photography showcase website)
 
@@ -95,7 +95,7 @@ To make an outline for the entire application I opened up app.py and imported Fl
 
 I then created a static folder and a templates folder, adding an index.html file to the templates. Re-routed the index function to open the index,html and tested it using “Hello World two”.
 
-For template inheritance I created a base.html and inserted boilerplate html and the ginger2 code block syntax for the head and the body. Then I added the relevant syntax to the index.html for template inheritance extension. I tested it using the <h1> “Testing” and ran the program.
+For template inheritance I created a base.html and inserted boilerplate html and the ginger2 code block syntax for the head and the body. Then I added the relevant syntax to the index.html for template inheritance extension. I tested it using the word “Testing” and ran the program.
 
 I used a bootstrap theme from https://startbootstrap.com/ to save time I copied the head and navbar and pasted it into the base.html. This way all pages on the site will have this template. In the index.html I pasted the rest of the code into the flask body code block. I now had a layout for my homepage. I added some bootstrap code for an image carousel and an image layout for the portfolio categories. I used an old contact form from a previous project to save time too. The website seemed to be working well and was fully responsive. The site was looking quite corporate which is what the client wanted. Using the content from the old site I filled in the about section, portfolio section and prices section. I also created a second base.html (base-002.html) which is a template for the separate gallery pages. I added some css styling to the main css file that came with the bootstrap theme to conform with my clients specification. Once I had the layout for the index page and the gallery pages set I needed to add the image.
 
