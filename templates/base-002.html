@@ -22,7 +22,13 @@
     <link href="{{ url_for('static', filename='css/freelancer.min.css') }}" rel="stylesheet">
     <!--<link href="{{ url_for('static', filename='css/main.css') }}">-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/lightbox.min.css') }}">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
     <script src="{{ url_for('static', filename='js/lightbox-plus-jquery.min.js') }}"></script>
+
+    
 
 
 </head>
@@ -53,7 +59,7 @@
     </nav>
 
     {% block content %}{% endblock %}
-
+    
     <!-- Footer -->
     <footer class="footer text-center">
         <div class="container">
@@ -120,6 +126,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="{{ url_for('static', filename='js/freelancer.min.js') }}"></script>
+    
 
 </body>
 
