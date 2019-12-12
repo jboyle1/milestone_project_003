@@ -1,4 +1,4 @@
-### https://milestone_project_003.herokuapp.com/
+### https://milestone-project-003.herokuapp.com/
  
 ## Milestone Project 3 (Paddy Boyle photography showcase website)
 
