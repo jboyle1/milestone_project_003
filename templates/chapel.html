@@ -1,44 +1,42 @@
-{% extends 'base-002.html' %}
+{% extends 'base-prop.html' %}
 {% block content %}
 
-<section class="page-section about" id="architecture">
-    <div class="container">
+    <section class="page-section about" id="architecture">
+        <div class="container">
 
-        <!-- Portfolio Section Heading -->
-        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">The Chapel</h2>
-        <!-- Icon Divider -->
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-           
-        </div>
-        
+            <!-- Portfolio Section Heading -->
+            <h2
+                class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">The Chapel</h2>
+            <!-- Icon Divider -->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
 
-</section>
-
-   
-
-<div class="container-001">
-    <h2 style="text-align: center; font-family: 'Quicksand', sans-serif;"><a href="/testimonials"> Add a testimonial</h2><br>
-
-    <div class="row">
-{% for chapel in paddy_photodb %}
-        <figure class="col-md-4">
-            <div id="wrapper-002"> 
-        
-            <a href="{{ chapel.url }}" width=400 class="hover"
-          data-responsive="true"
-          data-lightbox="mygallery"
-          data-title="{{ chapel.name }}">
-                    <img alt="picture" src="{{ chapel.url }}"
-                        class="img-fluid"></a><br><br>
-                <p class="text-002 lead">{{ chapel.name }}</p>
             </div>
-            
-        </figure>
-     {% endfor %}
-     </div>
-     <br><br>
-</div>
 
-  
-{% endblock %}
+        </section>
+
+        <div class="container-001">
+
+            <div class="row">
+                {% for chapel in paddy_photodb %}
+                    <figure class="col-md-4">
+                        <div id="wrapper-002">
+
+                            <a
+                                href="{{ chapel.url }}"
+                                width="400"
+                                class="hover"
+                                data-responsive="true"
+                                data-lightbox="mygallery"
+                                data-title="{{ chapel.name }}">
+                                <img alt="picture" src="{{ chapel.url }}" class="img-fluid"></a><br><br>
+                            <p class="text-002 lead">{{ chapel.name }}</p>
+                        </div>
+
+                    </figure>
+                {% endfor %}
+            </div>
+            <br><br>
+        </div>
+
+    {% endblock %}

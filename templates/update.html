@@ -1,101 +1,95 @@
 {% extends 'base-002.html' %}
 {% block content %}
 
-<section class="page-section about" id="commercial">
-    <div class="container">
+    <section class="page-section about" id="commercial">
+        <div class="container">
 
-        <!-- Portfolio Section Heading -->
-        <h2 class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Update Testimonial</h2>
-        <!-- Icon Divider -->
-        <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-           
-        </div>
-        
+            <!-- Portfolio Section Heading -->
+            <h2
+                class="cat-heading page-section-heading text-center text-uppercase text-secondary mb-0">Update Testimonial</h2>
+            <!-- Icon Divider -->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
 
-</section>
+            </div>
 
-   
+        </section>
 
-<div class="container-001">
-    <!-- About Section Content -->
+        <div class="container-001">
+            <!-- About Section Content -->
 
-    <div class="row">
+            <div class="row">
 
-   {%block head%} {%endblock%}
-   
-    <!-- Ginger2 Syntax template for Flask-->
-  </head>
-  <body>
-    {%block body%} 
-  <style>body, html {
-    margin: 0;
-    
-}
+                {%block head%}
+                    {%endblock%}
 
-.content {
-    margin: 0 auto;
-    width: 400px;
-}
+                    <!-- Ginger2 Syntax template for Flask-->
+                </head>
+                <body>
+                    {%block body%}
+                        <style>
+                            body,
+                            html {
+                                margin: 0;
 
-.container-002 {
-    margin-top: 0px;
-    width: 100%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+                            }
 
-table, td, th {
-    border: 1px solid #aaa;
-}
+                            .content {
+                                margin: 0 auto;
+                                width: 400px;
+                            }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
+                            .container-002 {
+                                margin-top: 0;
+                                width: 100%;
+                                text-align: center;
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
 
-th {
-    height: 30px;
-}
+                            table,
+                            td,
+                            th {
+                                border: 1px solid #aaa;
+                            }
 
-td {
-    text-align: center;
-    padding: 5px;
-}
+                            table {
+                                border-collapse: collapse;
+                                width: 100%;
+                            }
 
-.form {
-    margin-top: 20px;
-}
+                            th {
+                                height: 30px;
+                            }
 
-#content {
-    width: 70%;
-}</style>
-    
-    
+                            td {
+                                text-align: center;
+                                padding: 5px;
+                            }
 
-<div class="content">
-  
+                            .form {
+                                margin-top: 20px;
+                            }
 
-  <div class="form">
-    <form action="/update/{{ task.id }}" method="POST">
-      <input
-        type="text"
-        name="content"
-        id="content"
-        value="{{ task.content }}"
-      />
-      <input type="submit" value="Update" />
-    </form>
-  </div>
-</div>
-{% endblock %}
-    <!-- Ginger2 Syntax template for Flask-->
+                            #content {
+                                width: 70%;
+                            }
+                        </style>
 
+                        <div class="content">
 
-     </div>
-     <br><br>
-</div>
+                            <div class="form">
+                                <form action="/update/{{ task.id }}" method="POST">
+                                    <input type="text" name="content" id="content" value="{{ task.content }}"/>
+                                    <input type="submit" value="Update"/>
+                                </form>
+                            </div>
+                        </div>
+                    {% endblock %}
+                    <!-- Ginger2 Syntax template for Flask-->
 
-  
-{% endblock %}
+                </div>
+                <br><br>
+            </div>
+
+        {% endblock %}
