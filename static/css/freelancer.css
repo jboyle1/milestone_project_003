@@ -4436,6 +4436,8 @@ input[type="button"].btn-block {
   background-size: 100% 100%;
 }
 
+
+
 @media (max-width: 575.98px) {
 
   .navbar-expand-sm>.container,
@@ -10750,6 +10752,8 @@ a.text-dark:focus {
 
 #mainNav .navbar-brand {
   color: #fff;
+  margin: auto;
+  padding-top: 40px;
 }
 
 #mainNav .navbar-nav {
@@ -10767,7 +10771,15 @@ a.text-dark:focus {
 #mainNav .navbar-nav li.nav-item a.nav-link:active,
 #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
-}
+ 
+    font-size: 80%;
+    padding: .8rem;
+    text-align: center;
+    margin: auto;
+  }
+
+
+
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
   color: #1abc9c;
@@ -10776,6 +10788,8 @@ a.text-dark:focus {
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.8rem;
+  text-align: center;
+  margin: auto;
 }
 
 @media (min-width: 992px) {
@@ -10788,6 +10802,7 @@ a.text-dark:focus {
   #mainNav .navbar-brand {
     font-size: 1.75em;
     transition: font-size 0.3s;
+    margin: auto;
   }
 
   #mainNav .navbar-nav {

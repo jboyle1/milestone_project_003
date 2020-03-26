@@ -10744,7 +10744,9 @@ a.text-dark:hover {
 }
 
 #mainNav .navbar-brand {
-    color: #fff
+    color: #fff;
+    margin: auto;
+    padding-top: 40px;
 }
 
 #mainNav .navbar-nav {
@@ -10770,7 +10772,9 @@ a.text-dark:hover {
 
 #mainNav .navbar-toggler {
     font-size: 80%;
-    padding: .8rem
+    padding: .8rem;
+    text-align: center;
+    margin: auto;
 }
 
 @media (min-width:992px) {
@@ -10782,7 +10786,8 @@ a.text-dark:hover {
 
     #mainNav .navbar-brand {
         font-size: 1.75em;
-        transition: font-size .3s
+        transition: font-size .3s;
+        margin: auto;
     }
 
     #mainNav .navbar-nav {
