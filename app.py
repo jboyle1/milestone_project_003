@@ -19,89 +19,51 @@ db = SQLAlchemy(app)
 def index():
     return render_template('index.html', paddy_photodb=mongo.db.catagory_photos.find())
 
+##/Homepage routing
 
 ##Catagory routing
+
+##Architecture routing
 
 @app.route('/architecture')
 def architecture():
     return render_template('architecture.html', paddy_photodb=mongo.db.photos.find())
 
+@app.route('/1')
+def base_arch():
+    return render_template('architecture.html', paddy_photodb=mongo.db.photos.find())
+
+##Commercial routing
 
 @app.route('/commercial')
 def commercial():
     return render_template('commercial.html', paddy_photodb=mongo.db.photos_002.find())
 
+@app.route('/2')
+def base_com():
+    return render_template('commercial.html', paddy_photodb=mongo.db.photos_002.find())
+
+##Property routing
 
 @app.route('/property')
 def property():
     return render_template('property.html', paddy_photodb=mongo.db.photos_003.find())
 
+@app.route('/3')
+def base_prop():
+    return render_template('property.html', paddy_photodb=mongo.db.photos_003.find()) 
+
+##Construction routing
 
 @app.route('/construction')
 def construction():
     return render_template('construction.html', paddy_photodb=mongo.db.photos_004.find())
 
+@app.route('/4')
+def base_con():
+    return render_template('construction.html', paddy_photodb=mongo.db.photos_004.find()) 
 
-##Testimonial routing
-
-class Todo(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    content = db.Column(db.String(200), nullable=False)
-    date_created = db.Column(db.DateTime, default=datetime.utcnow)
-
-    def __repr__(self):
-        return '<Task %r>' % self.id
-
-
-@app.route('/testimonials', methods=['POST', 'GET'])
-def testimonials(): 
-    if request.method == 'POST':
-        task_content = request.form['content']
-        new_task = Todo(content=task_content)
-
-        try:
-            db.session.add(new_task)
-            db.session.commit()
-            return redirect('/testimonials')
-        except:
-            return 'There was an issue adding your testimonial'
-
-    else:
-        tasks = Todo.query.order_by(Todo.date_created).all()
-        return render_template('testimonials.html', tasks=tasks)
-
-
-
-@app.route('/delete/<int:id>')
-def delete(id):
-    task_to_delete = Todo.query.get_or_404(id)
-
-    try:
-        db.session.delete(task_to_delete)
-        db.session.commit()
-        return redirect('/testimonials')
-    except:
-        return 'There was a problem deleting that testimonial'
-
-
-@app.route('/update/<int:id>', methods=['GET', 'POST'])
-def update(id):
-    task = Todo.query.get_or_404(id)
-
-    if request.method == 'POST':
-        task.content = request.form['content']
-
-        try:
-            db.session.commit()
-            return redirect('/testimonials')
-        except:
-            return 'There was an issue updating your testimonial'
-
-    else:
-        return render_template('update.html', task=task)
-
-
-
+##/Catagory routing
 
 ##Architecture routing
 
@@ -212,4 +174,4 @@ def file(filename):
 
 
 if __name__ == "__main__":
-    app.run(host=os.getenv('IP'), port=int(os.getenv('PORT')), debug=True)
+    app.run(host=os.getenv('IP'), port=int(os.getenv('PORT', 5000)), debug=True)
