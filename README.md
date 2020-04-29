@@ -149,4 +149,4 @@ To deploy this website I used Heroku. I Installed Heroku in GitPod and set up an
 
 #### Final Word
 
-I think this project has shown that I am competent in building full-stack websites that use common dataset and the CRUD operations. All the images on the site apart from the carousel are kept in a MongoDB database and are accessed by utilising Python, Flask and pymongo. The site runs smothly and I think is aesthetically pleasing to the user. I have compleated all my user stories and my client is very happy with the results.
+I think this project has shown that I am competent in building full-stack websites that use common dataset and the CRUD operations. All the images on the site apart from the carousel are kept in a MongoDB database and are accessed by utilising Python, Flask and pymongo. The site runs smothly and I think is aesthetically pleasing to the user. I have compleated all my user stories and my client is very happy with the results
